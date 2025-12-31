@@ -19,7 +19,7 @@
         <navigationDrawer:SfNavigationDrawer.DrawerSettings>
             <navigationDrawer:DrawerSettings x:Name="primaryDrawer" Position="Left" DrawerWidth="300" EnableSwipeGesture="True" Transition="SlideOnTop">
                 <navigationDrawer:DrawerSettings.DrawerContentView>
-                    <ScrollView>
+                    <ScrollView VerticalScrollBarVisibility="Never">
                         <VerticalStackLayout Padding="12" Spacing="2">
                             <Label Text="Mail" FontAttributes="Bold" FontSize="18" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="12, 0" />
                             <Label Text="Inbox" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
@@ -38,7 +38,7 @@
         <navigationDrawer:SfNavigationDrawer.SecondaryDrawerSettings>
             <navigationDrawer:DrawerSettings x:Name="secondaryDrawer" Position="Right" DrawerWidth="300" EnableSwipeGesture="True" Transition="SlideOnTop">
                 <navigationDrawer:DrawerSettings.DrawerContentView>
-                    <ScrollView>
+                    <ScrollView VerticalScrollBarVisibility="Never">
                         <VerticalStackLayout Padding="12" Spacing="2">
                             <Label Text="Settings" FontAttributes="Bold" FontSize="18" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="12, 0" />
                             <Label Text="Preferences" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
