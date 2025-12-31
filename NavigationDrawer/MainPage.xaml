@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationDrawer.MainPage"
+             xmlns:navigationDrawer="clr-namespace:Syncfusion.Maui.NavigationDrawer;assembly=Syncfusion.Maui.NavigationDrawer">
+
+    <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
+        <navigationDrawer:SfNavigationDrawer.ContentView>
+            <Grid RowDefinitions="80, *">
+                <Grid BackgroundColor="#6750A4" ColumnDefinitions="*, *">
+                    <Button Text="&#xe719;" Clicked="OnPrimaryDrawerToggled" FontFamily="MauiMaterialAssets" FontAttributes="Bold" TextColor="White" FontSize="24" BackgroundColor="Transparent" HorizontalOptions="Start" Grid.Column="0" />
+                    <Button Text="&#xe716;" Clicked="OnSecondaryDrawerToggled" FontFamily="MauiMaterialAssets" FontAttributes="Bold" TextColor="White" FontSize="24" BackgroundColor="Transparent" HorizontalOptions="End" Grid.Column="1" />
+                </Grid>
+                <Label Grid.Row="1" Text="Main Content" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" Margin="16" />
+            </Grid>
+        </navigationDrawer:SfNavigationDrawer.ContentView>
+
+        <!-- Primary drawer settings -->
+        <navigationDrawer:SfNavigationDrawer.DrawerSettings>
+            <navigationDrawer:DrawerSettings x:Name="primaryDrawer" Position="Left" DrawerWidth="300" EnableSwipeGesture="True" Transition="SlideOnTop">
+                <navigationDrawer:DrawerSettings.DrawerContentView>
+                    <ScrollView VerticalScrollBarVisibility="Never">
+                        <VerticalStackLayout Padding="12" Spacing="2">
+                            <Label Text="Mail" FontAttributes="Bold" FontSize="18" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="12, 0" />
+                            <Label Text="Inbox" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Drafts" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Sent" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Starred" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Spam" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Trash" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                        </VerticalStackLayout>
+                    </ScrollView>
+                </navigationDrawer:DrawerSettings.DrawerContentView>
+            </navigationDrawer:DrawerSettings>
+        </navigationDrawer:SfNavigationDrawer.DrawerSettings>
+
+        <!-- Secondary drawer settings -->
+        <navigationDrawer:SfNavigationDrawer.SecondaryDrawerSettings>
+            <navigationDrawer:DrawerSettings x:Name="secondaryDrawer" Position="Right" DrawerWidth="300" EnableSwipeGesture="True" Transition="SlideOnTop">
+                <navigationDrawer:DrawerSettings.DrawerContentView>
+                    <ScrollView VerticalScrollBarVisibility="Never">
+                        <VerticalStackLayout Padding="12" Spacing="2">
+                            <Label Text="Settings" FontAttributes="Bold" FontSize="18" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="12, 0" />
+                            <Label Text="Preferences" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Filters" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="Help" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                            <Label Text="About" Padding="12,14" VerticalTextAlignment="Center" FontSize="15" />
+                        </VerticalStackLayout>
+                    </ScrollView>
+                </navigationDrawer:DrawerSettings.DrawerContentView>
+            </navigationDrawer:DrawerSettings>
+        </navigationDrawer:SfNavigationDrawer.SecondaryDrawerSettings>
+    </navigationDrawer:SfNavigationDrawer>
+
+</ContentPage>
